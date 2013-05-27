@@ -13,6 +13,7 @@ using OpenPop.Mime.Decode;
 using OpenPop.Mime.Header;
 using OpenPop.Pop3;
 using System.IO;
+using System.Data.SQLite;
 
 namespace EmailClient
 {
@@ -21,6 +22,8 @@ namespace EmailClient
         List<OpenPop.Mime.Message> list;
 
         private BackgroundWorker worker;
+
+        SQLiteConnection sqliteConn;
         
         public RecieveMail()
         {
@@ -54,10 +57,10 @@ namespace EmailClient
             {
                 // Connect to the server
                 //client.Connect("pop.gmail.com", 995, true);
-                client.Connect("mail.server", 110, false);
+                client.Connect("mail1.stofanet.dk", 110, false);
 
                 // Authenticate ourselves towards the server
-                client.Authenticate("user_id", "password");
+                client.Authenticate("2241859m002", "big1234");
 
                 // Get the number of messages in the inbox
                 int messageCount = client.GetMessageCount();
@@ -90,13 +93,45 @@ namespace EmailClient
         {
             list = (List<OpenPop.Mime.Message>)e.Result;
 
+            sqliteConn = new SQLiteConnection(@"Data Source = messages.db;");
+            SQLiteTransaction sqlTrans;
+
+            SQLiteCommand commandInsert = new SQLiteCommand("INSERT OR IGNORE INTO messages (id, sender, subject, body) VALUES (@id, @sender, @subject, @body)", sqliteConn);
+            //SQLiteCommand commandCount = new SQLiteCommand("SELECT COUNT(*) FROM messages", sqliteConn);
+            
+            sqliteConn.Open();
+
             msgcounglb.Text = Convert.ToString(list.Count);
 
             Subjectlsbx.Items.Clear();
+            //int i = Convert.ToInt32(commandCount.ExecuteScalar());
             foreach (OpenPop.Mime.Message message in list)
             {
-                Subjectlsbx.Items.Add(message.Headers.Subject.ToString());
+                if (message.Headers.MessageId != null)
+                {
+                    commandInsert.Parameters.AddWithValue("@id", message.Headers.MessageId);
+                    commandInsert.Parameters.AddWithValue("@sender", message.Headers.From.Address);
+                    commandInsert.Parameters.AddWithValue("@subject", message.Headers.Subject);
+                    if (!message.MessagePart.IsMultiPart)
+                    {
+                        commandInsert.Parameters.AddWithValue("@body", message.MessagePart.GetBodyAsText());
+                    }
+                    else
+                    {
+                        OpenPop.Mime.MessagePart plainText = message.FindFirstPlainTextVersion();
+                        commandInsert.Parameters.AddWithValue("@body", plainText.GetBodyAsText());
+                    }
+                    sqlTrans = sqliteConn.BeginTransaction();
+                    int result = commandInsert.ExecuteNonQuery();
+                    sqlTrans.Commit();
+
+                    Subjectlsbx.Items.Add(message.Headers.Subject.ToString());
+                }
+                //i++;
             }
+
+            commandInsert.Dispose();
+            sqliteConn.Close();
         }
 
         private void Subjectlsbx_SelectedIndexChanged(object sender, EventArgs e)

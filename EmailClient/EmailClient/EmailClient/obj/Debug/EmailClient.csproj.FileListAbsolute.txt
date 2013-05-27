@@ -23,3 +23,15 @@ C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Debug\EmailCli
 C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Debug\EmailClient.Properties.Resources.resources
 C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Debug\EmailClient.RecieveMail.resources
 C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Debug\EmailClient.csproj.GenerateResource.Cache
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\bin\Debug\EmailClient.exe.config
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\bin\Debug\EmailClient.exe
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\bin\Debug\EmailClient.pdb
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\bin\Debug\OpenPop.dll
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\obj\Debug\EmailClient.EmailClient_form.resources
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\obj\Debug\EmailClient.NewMail.resources
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\obj\Debug\EmailClient.Properties.Resources.resources
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\obj\Debug\EmailClient.RecieveMail.resources
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\obj\Debug\EmailClient.csproj.GenerateResource.Cache
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\obj\Debug\EmailClient.exe
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\obj\Debug\EmailClient.pdb
+C:\Users\pasa\Documents\Background\C#\ProgrammeringIII\EmailClient\EmailClient\EmailClient\obj\Debug\EmailClient.csprojResolveAssemblyReference.cache
