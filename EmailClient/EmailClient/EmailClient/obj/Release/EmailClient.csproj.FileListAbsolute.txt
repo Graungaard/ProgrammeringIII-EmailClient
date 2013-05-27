@@ -1,0 +1,12 @@
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\bin\Release\EmailClient.exe.config
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\bin\Release\EmailClient.exe
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\bin\Release\EmailClient.pdb
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\bin\Release\OpenPop.dll
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Release\EmailClient.csprojResolveAssemblyReference.cache
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Release\EmailClient.EmailClient_form.resources
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Release\EmailClient.NewMail.resources
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Release\EmailClient.Properties.Resources.resources
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Release\EmailClient.RecieveMail.resources
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Release\EmailClient.csproj.GenerateResource.Cache
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Release\EmailClient.exe
+C:\Users\pasa\Desktop\EmailClient (4)\EmailClient\EmailClient\obj\Release\EmailClient.pdb
